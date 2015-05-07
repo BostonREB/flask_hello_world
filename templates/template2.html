@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% from "macros.html" import nav_link with context %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Template Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div#main {
+                max-width: 500px;
+                padding: 20px;
+            }
+
+            nav .title {
+                font-weight: bold;
+            }
+
+            a.active {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        {% block content %}
+        <div id="main">
+            <p>{{my_string}}</p>
+        </div>
+        {% endblock %}
+
+        {% block footer %} {% endblock %}
+    </body>
+</html>
